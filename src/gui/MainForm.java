@@ -20,6 +20,7 @@ public class MainForm extends javax.swing.JFrame {
      */
     public MainForm() {
         initComponents();
+        
     }
 
     /**
@@ -204,13 +205,13 @@ public class MainForm extends javax.swing.JFrame {
 
     private void botonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalcularActionPerformed
        try {
-           String s = JLabel.getText();
+           String s = campoPeso.getText();
            double peso = Double.valueOf(s);
-           s = JLabel3.getText();
+           s = campoEstatura.getText();
            double estatura = Double.valueOf(s);
            imc = new Imc(peso, estatura);
            etiquetaImc.setText(String.format("%2.2f", imc.getValor()));
-           etiquetaEstadoNutricional.setText(imc.getEstadoNutricional());
+           etiquetaEstadoNutricional.setText(imc.getEstaturaNutricional());
        } 
        catch (NumberFormatException nfe){
        }
